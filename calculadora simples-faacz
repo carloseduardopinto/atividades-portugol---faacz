@@ -1,0 +1,67 @@
+programa {
+  funcao inicio()
+  {
+    
+   real n1,n2,result
+   inteiro op
+   caracter reset
+
+   faca 
+   {
+     limpa()
+
+     escreva("CALCULADORA SIMPLES\n")
+     escreva(" 1- SOMA\n")
+     escreva(" 2- SUBTRAÇAO\n")
+     escreva(" 3- MULTIPLICAÇAO\n")
+     escreva(" 4- DIVISÃO\n")
+
+     escreva("Escolha uma opçao:\n")
+     leia(op)
+     escreva("Digite o Primeiro Número:")
+     leia(n1)
+     escreva("\nDigite o Segundo Número:")
+     leia(n2)
+
+     escolha(op)
+     {
+       caso 1:
+         result=n1+n2
+         escreva("O Resultado é:\n")
+       pare
+
+       caso 2:
+         result=n1-n2
+         escreva("O Resultado é:\n")
+       pare
+
+       caso 3:
+         result=n1*n2
+         escreva("O Resultado é:\n")
+       pare
+
+       caso 4:
+         se(n2== 0)
+         {
+         escreva("ERRO:Divisão por 0\n")      
+         }
+
+         senao
+         {
+           result=n1/n2
+           escreva("O Resultado é:\n")
+          }
+       pare
+
+       caso contrario :
+         escreva("Opçao Inválida\n")
+       pare
+
+      }
+      escreva("\nDejeja fazer outra Operaçao?(S/N)\n")
+      leia(reset)
+
+    } enquanto(reset=='S' ou reset=='s')
+
+  }
+}
